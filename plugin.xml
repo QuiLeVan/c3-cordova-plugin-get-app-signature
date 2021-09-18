@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin 
+    id="c3-cordova-plugin-get-app-signature" 
+    version="0.0.1" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <name>C3ReadAppSignature</name>
+
+    <js-module 
+        name="C3ReadAppSignature" 
+        src="www/C3ReadAppSignature.js">
+        
+        <clobbers target="cordova.plugins.C3ReadAppSignature" />
+    </js-module>
+    
+    <!-- ANDROID -->
+    <platform name="android">
+
+        <!-- Config to SDK android -->
+        <!-- <framework src="src/android/build.gradle" custom="true" type="gradleReference" /> -->
+
+        <!-- Android Package Wrapper -->
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="C3ReadAppSignature">
+                <param name="android-package" value="com.cordova.plugins.C3ReadAppSignature" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/C3ReadAppSignature.java" target-dir="src/com/cordova/plugins" />
+
+        <!-- AndroidManifest Add Permission         -->
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+        </config-file>
+
+    </platform>
+</plugin>

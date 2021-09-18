@@ -1,0 +1,21 @@
+{
+  "name": "c3-cordova-plugin-get-app-signature",
+  "version": "0.0.2",
+  "description": "This plugin is used to get application signature for Construct3 Addon",
+  "cordova": {
+    "id": "c3-cordova-plugin-get-app-signature",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuiLeVan/c3-cordova-plugin-get-app-signature.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "quilv.com",
+  "license": "ISC"
+}
